@@ -1,5 +1,5 @@
 {
-  "name": "example-project",
+  "name": "evaluate_news_nlp",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -34,6 +34,7 @@
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^4.2.3",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "workbox-webpack-plugin": "^6.0.2"
   }
 }
