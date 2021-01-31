@@ -1,4 +1,4 @@
-// import { checkForName } from './nameChecker';
+import { isValidUrl } from './urlValidator';
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -7,10 +7,14 @@ function handleSubmit(event) {
   const inputName = document.getElementById('name').value;
   const baseUrl = 'http://localhost:8082/sentiment';
 
-  loadData(baseUrl, inputName).then((results) => {
-    const el = document.getElementById('results');
-    updateUI(el, results);
-  });
+  if (isValidUrl(inputName)) {
+    loadData(baseUrl, inputName).then((results) => {
+      const el = document.getElementById('results');
+      updateUI(el, results);
+    });
+  } else {
+    alert('Please enter a valid URL.');
+  }
 }
 
 const loadData = async (url = '', src = {}) => {

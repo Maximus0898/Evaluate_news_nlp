@@ -2,23 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
     <title>Test</title>
-    <link rel="stylesheet" href="/styles/resets.css" />
-    <link rel="stylesheet" href="/styles/base.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
-    <link rel="stylesheet" href="/styles/form.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
   </head>
 
   <body>
     <header>
-      <div class="">Logo</div>
-      <div class="">navigation</div>
+      <nav class="navbar">
+        <span class="nav__toggler" id="toggler">
+          <i id="icon" class="fas fa-bars"></i>
+        </span>
+        <a href="#" class="nav-brand">Synti-NLP</a>
+
+        <ul class="nav__list" id="nav">
+          <li class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <section>
         <form class="" onsubmit="return handleSubmit(event)">
+          <label for="name">Enter a URL: </label>
           <input
             id="name"
             type="text"
@@ -29,14 +48,14 @@
           <input
             type="submit"
             name=""
-            value="submit"
+            value="Submit"
             onclick="return Client.handleSubmit(event)"
             onsubmit="return Client.handleSubmit(event)"
           />
         </form>
       </section>
 
-      <section>
+      <section class="result">
         <strong>Form Results:</strong>
         <div id="results"></div>
       </section>
@@ -58,6 +77,21 @@
             });
         });
       }
+
+      let Nav = document.getElementById('nav');
+      let Toggler = document.getElementById('toggler');
+      let Icon = document.getElementById('icon');
+
+      Toggler.addEventListener('click', function () {
+        Nav.classList.toggle('active');
+        if (Icon.classList.contains('fa-bars')) {
+          Icon.classList.remove('fa-bars');
+          Icon.classList.add('fa-times');
+        } else {
+          Icon.classList.remove('fa-times');
+          Icon.classList.add('fa-bars');
+        }
+      });
     </script>
   </body>
 </html>
