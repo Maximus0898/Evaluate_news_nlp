@@ -1,5 +1,21 @@
-footer {
-  background: #252525;
+.footer {
+  background-color: #252525;
   color: #e7e7e7;
-  height: 70px;
+  text-align: center;
+  font-weight: 600;
+  padding: 3rem 0;
+  font-size: 1.3rem;
+
+  .footer__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .footer__social {
+    margin-bottom: 2rem;
+    .footer__icon {
+      font-size: 2rem;
+      color: #fff;
+      margin: 0 1rem;
+    }
+  }
 }

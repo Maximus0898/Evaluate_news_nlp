@@ -57,12 +57,40 @@
 
       <section class="result">
         <strong>Form Results:</strong>
+        <hr />
         <div id="results"></div>
+      </section>
+
+      <section id="about">
+        <div class="about-content">
+          <h1>About me</h1>
+          <p>
+            Hi! I'm Synti-NLP. I use MeaningCloud's Sentiment Analysis API to
+            analyze to determine if the text provided expresses a
+            positive/negative/neutral sentiment; To do this, the local polarity
+            of the different sentences in the text is identified and the
+            relationship between them evaluated, resulting in a global polarity
+            value for the whole text. Follow me on Github:
+          </p>
+          <a
+            href="https://github.com/Maximus0898/Evaluate_news_nlp"
+            target="_blank"
+            rel="noopener"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+        <div class="about-img"></div>
       </section>
     </main>
 
-    <footer>
-      <p>This is a footer</p>
+    <footer class="footer">
+      <p class="footer__title">Synti-NLP</p>
+      <div class="footer__social">
+        <a href="#" class="footer__icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="footer__icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="footer__icon"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>&copy; <span id="year"></span> Copyright. All Rights Reserved.</p>
     </footer>
     <script>
       if ('serviceWorker' in navigator) {
