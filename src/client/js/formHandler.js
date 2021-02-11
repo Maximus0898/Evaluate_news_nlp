@@ -54,4 +54,4 @@ const updateUI = async (el, data) => {
   }
 };
 
-export { handleSubmit };
+export { handleSubmit, loadData, updateUI };

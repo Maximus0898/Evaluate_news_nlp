@@ -106,6 +106,10 @@
         });
       }
 
+      (function () {
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+      })();
+
       let Nav = document.getElementById('nav');
       let Toggler = document.getElementById('toggler');
       let Icon = document.getElementById('icon');
